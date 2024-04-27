@@ -348,7 +348,8 @@ func IframeContentHandler(ctx *App, res http.ResponseWriter, req *http.Request) 
                   "key": "%s",
                   "permissions": {
                       "download": %s
-                  }
+                  },
+				  "path": "%s"
               },
               "editorConfig": {
                   "callbackUrl": "%s/personaloffice/event",
@@ -386,6 +387,7 @@ func IframeContentHandler(ctx *App, res http.ResponseWriter, req *http.Request) 
 			}
 			return "false"
 		}(),
+		path,
 		filestashServerLocation,
 		oodsMode,
 		userId,
