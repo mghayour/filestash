@@ -8,7 +8,7 @@ build_init:
 	go generate -x ./server/...
 
 build_frontend:
-	NODE_ENV=production npm run build
+	npm run build
 
 build_backend:
 	CGO_ENABLED=1 go build --tags "fts5" -o dist/filestash cmd/main.go
