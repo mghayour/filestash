@@ -111,6 +111,7 @@ func init() {
 	Hooks.Register.XDGOpen(`
         if(mime === "application/word" || mime === "application/msword" ||
            mime === "application/vnd.oasis.opendocument.text" || mime === "application/vnd.oasis.opendocument.spreadsheet" ||
+           mime === "application/json" || mime === "application/xml" ||
            mime === "application/excel" || mime === "application/vnd.ms-excel" || mime === "application/powerpoint" ||
            mime === "application/vnd.ms-powerpoint" || mime === "application/vnd.oasis.opendocument.presentation" ) {
               return ["appframe", {"endpoint": "/api/personaloffice/iframe"}];
